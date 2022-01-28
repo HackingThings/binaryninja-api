@@ -1468,7 +1468,7 @@ class TestWithFunction(TestWithBinaryView):
 		assert len(self.func.function_tags) == 0
 
 		assert len(self.func.address_tags) == 0
-		self.func.add_auto_address_tag(addr, tag1)
+		self.func.add_auto_address_tag(addr, tag1, self.func.arch)
 		t = self.func.create_auto_address_tag(addr, tt2, msg2, True)
 		t = self.func.create_auto_address_tag(addr, tt2, msg2, True)
 		tags = self.func.address_tags
